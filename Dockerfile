@@ -1,5 +1,5 @@
 FROM beevelop/cordova:latest
-MAINTAINER Walter whites <hopemagie@gmail.com>
+MAINTAINER Michael Buluma
 WORKDIR /opt
 RUN wget -q https://services.gradle.org/distributions/gradle-4.1-all.zip
 RUN chmod 775 /opt/gradle-4.1-all.zip
@@ -15,6 +15,8 @@ ENV PATH $PATH:/usr/bin
 ENV ANDROID_HOME=/opt/android
 RUN echo $JAVA_HOME
 ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
+RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+RUN export PATH=$JAVA_HOME/bin:$PATH
 WORKDIR /opt/android/tools/bin
 RUN ./sdkmanager --update
 RUN mkdir "$ANDROID_HOME/licenses"
