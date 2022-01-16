@@ -1,4 +1,6 @@
 # docker-cordova
+[![Build and Push Container](https://github.com/buluma/docker-cordova/actions/workflows/build.yml/badge.svg)](https://github.com/buluma/docker-cordova/actions/workflows/build.yml)
+
 Build your app with cordova in docker container
 
 https://hub.docker.com/r/walterwhites/docker-cordova/
