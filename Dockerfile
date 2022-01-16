@@ -14,8 +14,8 @@ ENV GRADLE_USER_HOME /opt/gradle-4.1
 ENV PATH $PATH:/usr/bin
 ENV ANDROID_HOME=/opt/android
 RUN echo $JAVA_HOME
-ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
-RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+RUN export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 RUN export PATH=$JAVA_HOME/bin:$PATH
 WORKDIR /opt/android/tools/bin
 RUN ./sdkmanager --update
